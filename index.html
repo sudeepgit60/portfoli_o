@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Portfolio Wbsite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b24d03c2ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- #header -->
+  <div id="header">
+    <!-- .container -->
+    <div class="container">
+      <nav>
+        <!-- <img src="images/logo.png" alt="" class="logo"> -->
+        <ul>
+      
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Graphic Designer</p>
+        <h1>Hey, I'm <span>SUDIP</span> <br>  Ghimire From NEPAL</h1>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ....... about section ..... -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/about1.jpg" alt="">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur alias iure similique vero, est voluptatem, cum voluptate beatae nobis praesentium velit corrupti quis officia! Molestiae quia aliquid quod quis facere.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link ">Skills</p>
+            <p class="tab-links">Experience</p>
+            <p class="tab-links">Education</p>
+          </div>
+          <div class="tab-contents " >
+            <ul>
+              <li><span>Graphic Designing</span><br> making design,logo</li>
+              <li><span>Front-End Development</span><br> web interface</li>
+            <li><span>Content Creation</span></li> 
+          </ul>
+        </div>
+        
+    </div>
+      </div>
+
+  </div>
+</div>
+<!-- ........services....... -->
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">About Me</h1>
+    <div class="services-list">
+      <div>
+        <!--  talako first line ko code font awesome bata layako ho font 'crop ko image ko lagi'  -->
+        <i class="fa-sharp fa-solid fa-crop"></i>
+        <h2>Graphic Design </h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum error asperiores officiis eum voluptates deserunt, modi deleniti sed doloremque placeat.</p>
+        <a href="#">Learn more</a>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Content Creation </h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, aperiam?</p>
+        <a href="#">Learn more</a>
+      </div>
+
+      <div>
+        <h2>Graphic Design </h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, iste.</p>
+        <a href="#">Learn more</a>
+      </div>
+
+      
+
+    </div>
+  </div>
+  <div>
+    <a href="#" class="btn">Seemore</a>
+  </div>
+
+</div>
+<!--  .....contact........ -->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sun-title">Contact Me</h1>
+        <p> <i class="fa-sharp fa-solid fa-paper-plane"></i> ghimiresudip54@gmail.com</p>
+        <p> <i class="fa-solid fa-phone"></i>9840948936</p>
+        <div class="social-icons">
+          <!--    i tag chai fontawesome aba layako ra tyo twitter ko lagi first line kai code copy garna ra facebook ko thau ma twitter-aquare gaene ra instagram ma pani tai ho -->
+          <a href="https://www.facebook.com/sudip.ghimire.3551"><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="images/my-cv.pdf" download class="btn btn-2">Download CV</a>
+      </div>
+      <div class="contact-left">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="message"  rows="6" placeholder="your Message"></textarea>
+          <button type="sunmit" class="btn btn-2" >Submit</button>
+        </form>
+   
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>copyright @ sudip <i class="fa-solid fa-heart"></i> </p>
+  </div>
+
+</div>
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyBnXs8KJG4aq8MvwixrqElTqdDMdV-ALvwxg44VOPA2FsQTVO1QyUwEVvBQe1wXgqVww/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+<script>
+</script>
+
+</body>
+</html>
